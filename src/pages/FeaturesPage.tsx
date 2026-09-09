@@ -7,7 +7,8 @@ import {
   Bot, 
   Briefcase, 
   CheckSquare, 
-  Compass
+  Compass,
+  ArrowRight
 } from 'lucide-react';
 import { Seo } from '../components/Seo';
 import { Link } from 'react-router-dom';
@@ -15,7 +16,7 @@ import { Link } from 'react-router-dom';
 export const FeaturesPage: React.FC = () => {
   const features = [
     {
-      icon: <Calendar className="w-6 h-6 text-brand-400" />,
+      icon: <Calendar className="w-6 h-6 text-brand-600" />,
       title: "Smart Timetable",
       badge: "Academic Schedule",
       summary: "Organize classes, lecture hours, instructors, and room numbers with zero friction.",
@@ -27,7 +28,7 @@ export const FeaturesPage: React.FC = () => {
       ]
     },
     {
-      icon: <CheckCircle2 className="w-6 h-6 text-emerald-400" />,
+      icon: <CheckCircle2 className="w-6 h-6 text-emerald-600" />,
       title: "Attendance Tracking",
       badge: "Institutional Thresholds",
       summary: "Stay informed about your attendance status and prevent exam eligibility issues.",
@@ -39,7 +40,7 @@ export const FeaturesPage: React.FC = () => {
       ]
     },
     {
-      icon: <CheckSquare className="w-6 h-6 text-indigo-400" />,
+      icon: <CheckSquare className="w-6 h-6 text-indigo-600" />,
       title: "Assignments & Tasks",
       badge: "Deadline Management",
       summary: "Prioritize academic coursework, lab submissions, and term projects.",
@@ -50,7 +51,7 @@ export const FeaturesPage: React.FC = () => {
       ]
     },
     {
-      icon: <BookOpen className="w-6 h-6 text-sky-400" />,
+      icon: <BookOpen className="w-6 h-6 text-sky-600" />,
       title: "Campus Repository",
       badge: "Academic Resources",
       summary: "A community-supported library organized by college, branch, and semester.",
@@ -63,7 +64,7 @@ export const FeaturesPage: React.FC = () => {
       link: { text: "Learn more about Repository", path: "/repository" }
     },
     {
-      icon: <Compass className="w-6 h-6 text-amber-400" />,
+      icon: <Compass className="w-6 h-6 text-amber-600" />,
       title: "Campus Events",
       badge: "Opportunities & Fests",
       summary: "Discover technical symposiums, hackathons, and cultural fests.",
@@ -75,7 +76,7 @@ export const FeaturesPage: React.FC = () => {
       link: { text: "Explore Campus Events", path: "/events" }
     },
     {
-      icon: <Scan className="w-6 h-6 text-teal-400" />,
+      icon: <Scan className="w-6 h-6 text-teal-600" />,
       title: "Smart Document Scanner",
       badge: "Local & Private",
       summary: "Scan lecture notes, lab sheets, and assignments on your device.",
@@ -88,7 +89,7 @@ export const FeaturesPage: React.FC = () => {
       link: { text: "View Scanner & Tools", path: "/tools" }
     },
     {
-      icon: <Bot className="w-6 h-6 text-purple-400" />,
+      icon: <Bot className="w-6 h-6 text-purple-600" />,
       title: "AI Study Assistant",
       badge: "Academic Guidance",
       summary: "Understand complex coursework concepts and structure study plans.",
@@ -99,7 +100,7 @@ export const FeaturesPage: React.FC = () => {
       ]
     },
     {
-      icon: <Briefcase className="w-6 h-6 text-rose-400" />,
+      icon: <Briefcase className="w-6 h-6 text-rose-600" />,
       title: "Placement & Career Hub",
       badge: "Job Preparation",
       summary: "Prepare for campus recruitment, technical interviews, and resume reviews.",
@@ -120,18 +121,18 @@ export const FeaturesPage: React.FC = () => {
         canonicalPath="/features"
       />
 
-      <div className="py-12 md:py-20 bg-slate-950">
+      <div className="py-12 md:py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}
           <div className="max-w-3xl space-y-4 mb-14">
-            <span className="text-xs font-semibold text-brand-400 uppercase tracking-widest">
+            <span className="text-xs font-bold text-brand-600 uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
               Core Capabilities
             </span>
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
               Designed For Every Aspect of Campus Life
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
               Campus Saathi replaces disjointed tools with a unified academic companion. Each feature is engineered specifically to address real student workflow bottlenecks.
             </p>
           </div>
@@ -141,31 +142,31 @@ export const FeaturesPage: React.FC = () => {
             {features.map((feature, idx) => (
               <div 
                 key={idx} 
-                className="p-7 rounded-2xl bg-slate-900/60 border border-slate-800 card-hover flex flex-col justify-between space-y-6"
+                className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm card-hover flex flex-col justify-between space-y-6"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="p-3 rounded-xl bg-slate-950 border border-slate-800">
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
                       {feature.icon}
                     </div>
-                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                    <span className="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
                       {feature.badge}
                     </span>
                   </div>
 
                   <div>
-                    <h2 className="text-xl font-bold text-white tracking-tight">
+                    <h2 className="text-xl font-bold text-slate-900 tracking-tight">
                       {feature.title}
                     </h2>
-                    <p className="text-slate-300 text-sm mt-1 leading-relaxed">
+                    <p className="text-slate-600 text-sm mt-1 leading-relaxed">
                       {feature.summary}
                     </p>
                   </div>
 
-                  <ul className="space-y-2 pt-2 border-t border-slate-800/80">
+                  <ul className="space-y-2 pt-4 border-t border-slate-100">
                     {feature.details.map((point, pIdx) => (
-                      <li key={pIdx} className="flex items-start text-xs sm:text-sm text-slate-400">
-                        <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1.5 mr-2.5 shrink-0"></span>
+                      <li key={pIdx} className="flex items-start text-sm text-slate-600">
+                        <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 mr-3 shrink-0"></span>
                         <span>{point}</span>
                       </li>
                     ))}
@@ -173,13 +174,13 @@ export const FeaturesPage: React.FC = () => {
                 </div>
 
                 {feature.link && (
-                  <div className="pt-2">
+                  <div className="pt-2 border-t border-slate-100">
                     <Link
                       to={feature.link.path}
-                      className="text-xs font-semibold text-brand-400 hover:text-brand-300 inline-flex items-center"
+                      className="text-xs font-bold text-brand-600 hover:text-brand-700 inline-flex items-center space-x-1"
                     >
                       <span>{feature.link.text}</span>
-                      <span className="ml-1">→</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 )}

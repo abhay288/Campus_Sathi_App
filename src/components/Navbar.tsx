@@ -38,28 +38,30 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           
           {/* Brand Logo & Name */}
           <Link 
             to="/" 
-            className="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-lg p-1"
+            className="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-xl p-1"
             aria-label="Campus Saathi Home"
           >
-            <img 
-              src="/logo.png" 
-              alt="Campus Saathi Logo" 
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl object-contain shadow-sm border border-slate-800 bg-slate-900 group-hover:scale-105 transition-transform"
-              width="40"
-              height="40"
-            />
+            <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center p-0.5 shadow-sm border border-slate-200/80 group-hover:border-brand-300 transition-all">
+              <img 
+                src="/logo.png" 
+                alt="Campus Saathi Logo" 
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform"
+                width="44"
+                height="44"
+              />
+            </div>
             <div className="flex flex-col">
-              <span className="text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-brand-400 transition-colors">
+              <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors">
                 Campus Saathi
               </span>
-              <span className="text-[10px] text-slate-400 tracking-wide font-medium hidden sm:block">
+              <span className="text-[11px] text-slate-500 tracking-wide font-medium hidden sm:block">
                 Your Campus. Your Companion.
               </span>
             </div>
@@ -74,8 +76,8 @@ export const Navbar: React.FC = () => {
                 className={({ isActive }) =>
                   `px-3.5 py-2 text-sm font-medium rounded-lg transition-colors ${
                     isActive
-                      ? 'text-brand-400 bg-brand-950/60 border border-brand-800/50'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-900'
+                      ? 'text-brand-600 bg-brand-50 font-semibold border border-brand-200/60'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/80'
                   }`
                 }
               >
@@ -84,7 +86,7 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Desktop Play Store CTA */}
           <div className="hidden lg:flex items-center">
             <GooglePlayBadge variant="compact" />
           </div>
@@ -94,7 +96,7 @@ export const Navbar: React.FC = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-400 hover:text-white hover:bg-slate-900 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+              className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
               aria-expanded={mobileMenuOpen}
               aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
@@ -107,7 +109,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-b border-slate-800 bg-slate-950 px-4 pt-3 pb-6 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg">
           <nav className="space-y-1" aria-label="Mobile Navigation">
             {navLinks.map((link) => (
               <NavLink
@@ -117,8 +119,8 @@ export const Navbar: React.FC = () => {
                 className={({ isActive }) =>
                   `flex items-center px-4 py-2.5 text-base font-medium rounded-lg transition-colors ${
                     isActive
-                      ? 'text-brand-400 bg-brand-950/70 border border-brand-800/60'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-900'
+                      ? 'text-brand-600 bg-brand-50 font-semibold border border-brand-200/60'
+                      : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'
                   }`
                 }
               >
@@ -127,27 +129,27 @@ export const Navbar: React.FC = () => {
             ))}
             
             {/* Secondary mobile links */}
-            <div className="pt-2 border-t border-slate-800/80 mt-2 space-y-1">
+            <div className="pt-2 border-t border-slate-100 mt-2 space-y-1">
               <NavLink
                 to="/security"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center px-4 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-900 rounded-lg"
+                className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg"
               >
-                <Shield className="w-4 h-4 mr-2" />
+                <Shield className="w-4 h-4 mr-2 text-slate-400" />
                 Security
               </NavLink>
               <NavLink
                 to="/privacy"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center px-4 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-900 rounded-lg"
+                className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg"
               >
-                <FileText className="w-4 h-4 mr-2" />
+                <FileText className="w-4 h-4 mr-2 text-slate-400" />
                 Privacy Policy
               </NavLink>
             </div>
           </nav>
 
-          <div className="pt-2 flex justify-center">
+          <div className="pt-3 flex justify-center">
             <div onClick={() => setMobileMenuOpen(false)}>
               <GooglePlayBadge className="w-full justify-center" />
             </div>

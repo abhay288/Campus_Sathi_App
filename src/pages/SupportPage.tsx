@@ -54,7 +54,6 @@ export const SupportPage: React.FC = () => {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Use standard mailto dispatch so no fake backend submission is claimed
     const subject = encodeURIComponent(`[Campus Saathi Support] ${topic}`);
     const body = encodeURIComponent(`User Email: ${email}\n\nIssue Description:\n${message}`);
     window.location.href = `mailto:mauryaabhay938@gmail.com?subject=${subject}&body=${body}`;
@@ -70,18 +69,18 @@ export const SupportPage: React.FC = () => {
       />
       <JsonLd pageType="faq" faqItems={faqItems.map(f => ({ question: f.q, answer: f.a }))} />
 
-      <div className="py-12 md:py-20 bg-slate-950">
+      <div className="py-12 md:py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
           {/* Header */}
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold text-brand-400 uppercase tracking-widest">
+            <span className="text-xs font-bold text-brand-600 uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
               Help Center
             </span>
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
               Need Help with Campus Saathi?
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
               We're here to assist. Find answers to common questions about your account, features, or submit a support inquiry directly to our development team.
             </p>
           </div>
@@ -90,8 +89,8 @@ export const SupportPage: React.FC = () => {
             
             {/* FAQ Accordion Column */}
             <div className="lg:col-span-7 space-y-6">
-              <h2 className="text-2xl font-bold text-white tracking-tight flex items-center space-x-2">
-                <HelpCircle className="w-6 h-6 text-brand-400" />
+              <h2 className="text-2xl font-bold text-slate-900 tracking-tight flex items-center space-x-2.5">
+                <HelpCircle className="w-6 h-6 text-brand-600" />
                 <span>Frequently Asked Questions</span>
               </h2>
 
@@ -101,25 +100,25 @@ export const SupportPage: React.FC = () => {
                   return (
                     <div 
                       key={idx}
-                      className="rounded-xl border border-slate-800 bg-slate-900/60 overflow-hidden transition-colors"
+                      className="rounded-2xl border border-slate-200 bg-white shadow-xs overflow-hidden transition-all"
                     >
                       <button
                         onClick={() => setActiveFaq(isOpen ? null : idx)}
-                        className="w-full p-4 sm:p-5 text-left flex items-center justify-between space-x-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
+                        className="w-full p-5 text-left flex items-center justify-between space-x-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
                         aria-expanded={isOpen}
                       >
-                        <span className="text-sm sm:text-base font-semibold text-slate-200">
+                        <span className="text-base font-bold text-slate-900">
                           {item.q}
                         </span>
                         {isOpen ? (
-                          <ChevronUp className="w-5 h-5 text-brand-400 shrink-0" />
+                          <ChevronUp className="w-5 h-5 text-brand-600 shrink-0" />
                         ) : (
                           <ChevronDown className="w-5 h-5 text-slate-400 shrink-0" />
                         )}
                       </button>
 
                       {isOpen && (
-                        <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-1 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800/60">
+                        <div className="px-5 pb-5 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
                           {item.a}
                         </div>
                       )}
@@ -131,27 +130,27 @@ export const SupportPage: React.FC = () => {
 
             {/* Direct Support Form Column */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-6">
+              <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-md space-y-6">
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-white tracking-tight flex items-center space-x-2">
-                    <Mail className="w-5 h-5 text-brand-400" />
+                  <h3 className="text-xl font-bold text-slate-900 tracking-tight flex items-center space-x-2">
+                    <Mail className="w-5 h-5 text-brand-600" />
                     <span>Contact Support</span>
                   </h3>
-                  <p className="text-slate-400 text-xs leading-relaxed">
+                  <p className="text-slate-500 text-xs leading-relaxed">
                     Have a specific question, bug report, or content takedown request? Send a direct message to our support desk.
                   </p>
                 </div>
 
                 <form onSubmit={handleFormSubmit} className="space-y-4">
                   <div>
-                    <label htmlFor="topic" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                    <label htmlFor="topic" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Topic
                     </label>
                     <select
                       id="topic"
                       value={topic}
                       onChange={(e) => setTopic(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-sm text-slate-200 focus:outline-none focus:border-brand-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-800 font-medium focus:outline-none focus:border-brand-500 focus:bg-white"
                     >
                       <option value="General Inquiry">General Inquiry</option>
                       <option value="Account or Login Issue">Account or Login Issue</option>
@@ -166,7 +165,7 @@ export const SupportPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                    <label htmlFor="email" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Your Email Address
                     </label>
                     <input
@@ -176,12 +175,12 @@ export const SupportPage: React.FC = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="student@example.com"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-sm text-slate-200 placeholder-slate-400 focus:outline-none focus:border-brand-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:bg-white font-medium"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                    <label htmlFor="message" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Message / Description
                     </label>
                     <textarea
@@ -191,13 +190,13 @@ export const SupportPage: React.FC = () => {
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder="Please describe your issue or question in detail..."
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-sm text-slate-200 placeholder-slate-400 focus:outline-none focus:border-brand-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:bg-white font-medium"
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm transition-colors shadow-sm"
+                    className="w-full inline-flex items-center justify-center space-x-2 px-5 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm transition-all shadow-sm active:scale-[0.98]"
                   >
                     <Send className="w-4 h-4" />
                     <span>Send Message to Support</span>
@@ -205,15 +204,15 @@ export const SupportPage: React.FC = () => {
                 </form>
 
                 {submitted && (
-                  <div className="p-3 rounded-lg bg-emerald-950/80 border border-emerald-800/80 text-emerald-300 text-xs flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 shrink-0" />
+                  <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-center space-x-2.5">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>Opening your email client to send your inquiry directly to our support desk.</span>
                   </div>
                 )}
 
-                <div className="pt-4 border-t border-slate-800/80 text-xs text-slate-400">
+                <div className="pt-4 border-t border-slate-100 text-xs text-slate-500">
                   <span>Direct developer contact: </span>
-                  <a href="mailto:mauryaabhay938@gmail.com" className="text-brand-400 hover:underline">
+                  <a href="mailto:mauryaabhay938@gmail.com" className="text-brand-600 font-semibold hover:underline">
                     mauryaabhay938@gmail.com
                   </a>
                 </div>
