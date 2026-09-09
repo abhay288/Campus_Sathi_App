@@ -1,0 +1,37 @@
+# Campus Saathi
+> Your Campus. Your Companion.
+
+Campus Saathi is an all-in-one student productivity and academic companion application designed for college and university students. It unites academic scheduling, marksheet calculators, campus resource repositories, college events, offline document scanning, study timers, and placement tools into a single, cohesive mobile experience.
+
+## What is Campus Saathi?
+Campus Saathi helps students organize academic life effectively, track class attendance against institutional policies (such as the 75% attendance rule), access peer-contributed and moderated academic resources, discover campus events, and utilize essential student productivity tools without invasive tracking or cloud dependency for personal files.
+
+## Core Capabilities
+- **Smart Timetable**: Class schedule management with slot alerts and day-to-day lecture views.
+- **Attendance Tracker**: Subject-wise lecture tracking, absence logs, and real-time safe bunk / required class forecasts.
+- **Assignments & Tasks**: Deadlines, academic task prioritization, and submission reminders.
+- **Campus Repository**: Structured academic material library categorized by College, Course, Branch, Semester, and Subject. Includes Previous Year Questions (PYQs), handwritten notes, lab manuals, practical files, and syllabi.
+- **Campus Events**: Discovery portal for college hackathons, technical symposiums, workshops, and cultural fests.
+- **Smart Scanner**: On-device document scanner featuring edge detection, perspective correction, color enhancement filters, and offline PDF/Image export. Personal documents are processed locally.
+- **Student Tools**:
+  - CGPA and SGPA Calculators supporting percentage, 10-point, and 4-point credit systems.
+  - Attendance Safe-Bunk Calculator.
+  - Focus Study Timer with Pomodoro technique and streak tracking.
+  - Engineering and Academic Unit Conversions & Formulas.
+  - Image to PDF/DOC converter, Image/PDF resizer, and Background Remover.
+  - ATS Resume Builder and informational Resume Checker.
+- **AI Study Assistant**: Academic comprehension and study query guidance.
+- **Placement & Career Hub**: Career preparation, technical interview roadmaps, and resume evaluation.
+
+## Official Web Links
+- Homepage: https://campussaathi.app/
+- Features: https://campussaathi.app/features
+- Student Tools: https://campussaathi.app/tools
+- Campus Repository: https://campussaathi.app/repository
+- Campus Events: https://campussaathi.app/events
+- About: https://campussaathi.app/about
+- Support: https://campussaathi.app/support
+- Security: https://campussaathi.app/security
+- Privacy Policy: https://campussaathi.app/privacy
+- Terms of Service: https://campussaathi.app/terms
+- Contact: https://campussaathi.app/contact

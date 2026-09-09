@@ -1,0 +1,89 @@
+# Campus Saathi – Complete Technical and Product Specification
+
+## 1. Product Overview
+- **Name**: Campus Saathi
+- **Tagline**: Your Campus. Your Companion.
+- **Supporting Message**: Everything you need for a smarter, more organized student life.
+- **Category**: Educational Application / Student Productivity Suite
+- **Platforms**: Android (Google Play Store), Web
+- **Developer**: Abhay Kushwaha
+- **Canonical Website**: https://campussaathi.app/
+- **Contact**: mauryaabhay938@gmail.com
+
+## 2. Core Functional Modules
+
+### A. Academic Organization & Tracking
+1. **Smart Timetable**:
+   - Manage lecture schedules, room numbers, and instructor details.
+   - Day-view and weekly schedule matrix.
+   - Timetable notifications before lectures begin.
+2. **Attendance Management**:
+   - Subject-wise attendance calculation.
+   - Visual alerts when attendance approaches or falls below institutional minimums (e.g. 75%).
+   - "Safe Bunk" forecast: Calculates how many classes a student can safely miss while remaining above the threshold.
+   - "Required Classes" forecast: Calculates how many consecutive lectures a student must attend to recover from low attendance.
+3. **Assignments & Deadlines**:
+   - Task tracker categorized by subject, urgency, and submission date.
+   - Status indicators: Pending, In Progress, Completed.
+
+### B. Campus Repository
+1. **Structured Taxonomy**:
+   - Hierarchically organized by: College / University -> Degree / Course -> Engineering / Academic Branch -> Semester -> Subject -> Subject Code.
+2. **Resource Formats**:
+   - Previous Year Question Papers (PYQs)
+   - Lecture Notes and Handwritten Summaries
+   - Laboratory Manuals and Experiment Guides
+   - Practical Files and Code Walkthroughs
+   - Official University Syllabi and Exam Patterns
+   - Curated Question Banks
+3. **Responsible Content and Moderation Policy**:
+   - All community-contributed materials are subject to administrator/peer review prior to public listing.
+   - Students must only upload academic materials they have legitimate rights or permission to share.
+   - Copyright takedown and content reporting mechanisms are monitored continuously.
+
+### C. Campus Events Portal
+1. **Event Types**:
+   - College Hackathons, Coding Contests, and Technical Symposiums.
+   - Hands-on Workshops, Expert Seminars, and Guest Lectures.
+   - Cultural Fests, Sports Meets, and Inter-College Competitions.
+2. **Event Details Provided**:
+   - Organizer Name and Department / College.
+   - Dates, Timings, and Physical or Virtual Venues.
+   - Mode (Online / Offline / Hybrid).
+   - Direct official registration and portal links.
+   - Verification status: Submissions undergo review to prevent spam or fraudulent listings.
+
+### D. Smart Document Scanner
+1. **Processing Architecture**:
+   - Fully on-device document processing for personal scanned documents.
+   - Real-time quad edge detection and perspective correction.
+   - Document filters: Original, Magic Color, B&W, Document Sharp, Contrast Boost.
+   - Brightness and contrast fine-tuning.
+   - Multi-page document merging into PDF or individual image export.
+   - No automatic cloud sync required for personal documents.
+
+### E. Student Productivity Tools
+1. **Grade Calculators**:
+   - SGPA (Semester Grade Point Average) calculator supporting custom credit weights and grading scales.
+   - CGPA (Cumulative Grade Point Average) calculator with percentage conversion formulas.
+2. **Focus Study Timer**:
+   - Customizable study intervals (Pomodoro method).
+   - Daily and weekly study streaks.
+3. **Academic Formula & Unit Converter**:
+   - Quick lookup for engineering units, mathematics constants, and academic formulas.
+4. **Document & Image Utilities**:
+   - Image to PDF / DOC converter.
+   - Image and PDF Resizer with custom file size targets.
+   - Background Remover for student project assets and profile pictures.
+5. **Resume Builder & ATS Checker**:
+   - Clean, ATS-friendly single-page and multi-page professional resume templates.
+   - Direct PDF export with vector typography.
+   - Informational ATS keyword and layout analysis (informational only; does not guarantee employment selection).
+
+## 3. Privacy, Security, and Compliance Principles
+- **No Deceptive Claims**: Campus Saathi does not fabricate student counts, download metrics, or university endorsements.
+- **Local File Security**: Scanned notes, personal resumes, and photos remain on the user's device unless explicitly shared by the user.
+- **Secure Network Communications**: All communication with backend services uses HTTPS with TLS encryption.
+- **Row Level Security (RLS)**: Database policies ensure users only access their own data.
+- **Public Website Hygiene**: Static website hosted on Netlify with Strict Content-Security-Policy, anti-framing headers, and no embedded private API credentials.
+- **AdMob app-ads.txt**: Verified developer root record: `google.com, pub-2744916228537957, DIRECT, f08c47fec0942fa0`.
