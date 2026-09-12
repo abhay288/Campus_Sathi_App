@@ -7,6 +7,7 @@
 
   **The official modern web portal and companion hub for Campus Saathi — an all-in-one student productivity and academic companion platform.**
 
+  [![Google Play](https://img.shields.io/badge/Google_Play-Download_App-414141?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.campussathi.app)
   [![Live Website](https://img.shields.io/badge/Website-campussathii.netlify.app-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://campussathii.netlify.app/)
   [![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -15,7 +16,14 @@
   [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
   <p align="center">
-    <a href="https://campussathii.netlify.app/">🌐 Live Portal</a> •
+    <a href="https://play.google.com/store/apps/details?id=com.campussathi.app">
+      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="52" />
+    </a>
+  </p>
+
+  <p align="center">
+    <a href="https://play.google.com/store/apps/details?id=com.campussathi.app">📲 Download Android App</a> •
+    <a href="https://campussathii.netlify.app/">🌐 Live Web Portal</a> •
     <a href="https://campussathii.netlify.app/features">✨ Features</a> •
     <a href="https://campussathii.netlify.app/tools">🧮 Student Tools</a> •
     <a href="https://campussathii.netlify.app/repository">📚 Academic Repository</a> •
@@ -23,6 +31,23 @@
   </p>
 
 </div>
+
+---
+
+## 📲 Download for Android
+
+Get the official **Campus Saathi** Android application directly from the **Google Play Store**:
+
+<p align="left">
+  <a href="https://play.google.com/store/apps/details?id=com.campussathi.app">
+    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="64" />
+  </a>
+</p>
+
+- **Direct Play Store Link**: [https://play.google.com/store/apps/details?id=com.campussathi.app](https://play.google.com/store/apps/details?id=com.campussathi.app)
+- **Package Name**: `com.campussathi.app`
+- **Supported OS**: Android 7.0 (Nougat) and higher
+- **Price**: 100% Free
 
 ---
 
