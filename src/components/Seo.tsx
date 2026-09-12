@@ -36,7 +36,7 @@ export const Seo: React.FC<SeoProps> = ({ title, description, canonicalPath = ''
 
     // Update Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    const fullUrl = `https://campussaathi.app${canonicalPath}`;
+    const fullUrl = `https://campussathii.netlify.app${canonicalPath}`;
     if (!canonical) {
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');

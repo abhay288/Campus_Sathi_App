@@ -24,14 +24,14 @@ Campus Saathi helps students organize academic life effectively, track class att
 - **Placement & Career Hub**: Career preparation, technical interview roadmaps, and resume evaluation.
 
 ## Official Web Links
-- Homepage: https://campussaathi.app/
-- Features: https://campussaathi.app/features
-- Student Tools: https://campussaathi.app/tools
-- Campus Repository: https://campussaathi.app/repository
-- Campus Events: https://campussaathi.app/events
-- About: https://campussaathi.app/about
-- Support: https://campussaathi.app/support
-- Security: https://campussaathi.app/security
-- Privacy Policy: https://campussaathi.app/privacy
-- Terms of Service: https://campussaathi.app/terms
-- Contact: https://campussaathi.app/contact
+- Homepage: https://campussathii.netlify.app/
+- Features: https://campussathii.netlify.app/features
+- Student Tools: https://campussathii.netlify.app/tools
+- Campus Repository: https://campussathii.netlify.app/repository
+- Campus Events: https://campussathii.netlify.app/events
+- About: https://campussathii.netlify.app/about
+- Support: https://campussathii.netlify.app/support
+- Security: https://campussathii.netlify.app/security
+- Privacy Policy: https://campussathii.netlify.app/privacy
+- Terms of Service: https://campussathii.netlify.app/terms
+- Contact: https://campussathii.netlify.app/contact

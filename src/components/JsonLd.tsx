@@ -13,20 +13,20 @@ export const JsonLd: React.FC<JsonLdProps> = ({ pageType = 'website', faqItems }
     const graph: any[] = [
       {
         '@type': 'WebSite',
-        '@id': 'https://campussaathi.app/#website',
-        url: 'https://campussaathi.app/',
+        '@id': 'https://campussathii.netlify.app/#website',
+        url: 'https://campussathii.netlify.app/',
         name: 'Campus Saathi',
         description: 'Your Campus. Your Companion. Academic productivity and campus management for college students.',
         publisher: {
-          '@id': 'https://campussaathi.app/#organization'
+          '@id': 'https://campussathii.netlify.app/#organization'
         }
       },
       {
         '@type': 'Organization',
-        '@id': 'https://campussaathi.app/#organization',
+        '@id': 'https://campussathii.netlify.app/#organization',
         name: 'Campus Saathi',
-        url: 'https://campussaathi.app/',
-        logo: 'https://campussaathi.app/logo.png',
+        url: 'https://campussathii.netlify.app/',
+        logo: 'https://campussathii.netlify.app/logo.png',
         contactPoint: {
           '@type': 'ContactPoint',
           email: 'mauryaabhay938@gmail.com',
@@ -35,7 +35,7 @@ export const JsonLd: React.FC<JsonLdProps> = ({ pageType = 'website', faqItems }
       },
       {
         '@type': 'SoftwareApplication',
-        '@id': 'https://campussaathi.app/#software',
+        '@id': 'https://campussathii.netlify.app/#software',
         name: 'Campus Saathi',
         operatingSystem: 'Android',
         applicationCategory: 'EducationalApplication',
@@ -62,7 +62,7 @@ export const JsonLd: React.FC<JsonLdProps> = ({ pageType = 'website', faqItems }
     if (pageType === 'faq' && faqItems && faqItems.length > 0) {
       graph.push({
         '@type': 'FAQPage',
-        '@id': 'https://campussaathi.app/support#faq',
+        '@id': 'https://campussathii.netlify.app/support#faq',
         mainEntity: faqItems.map((item) => ({
           '@type': 'Question',
           name: item.question,

@@ -7,7 +7,7 @@
 - **Category**: Educational Application / Student Productivity Suite
 - **Platforms**: Android (Google Play Store), Web
 - **Developer**: Abhay Kushwaha
-- **Canonical Website**: https://campussaathi.app/
+- **Canonical Website**: https://campussathii.netlify.app/
 - **Contact**: mauryaabhay938@gmail.com
 
 ## 2. Core Functional Modules

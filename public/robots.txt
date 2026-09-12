@@ -30,5 +30,5 @@ User-agent: OAI-SearchBot
 Allow: /
 
 # Sitemaps and AI Context
-Sitemap: https://campussaathi.app/sitemap.xml
+Sitemap: https://campussathii.netlify.app/sitemap.xml
 
